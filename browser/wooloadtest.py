@@ -14,8 +14,8 @@ class UserBehavior(TaskSet):
         """ on_start is called when a Locust start before any task is scheduled """
         #self.comment()
 
-    @task(1)
-    def comment(self):
+    @task
+    def index(self):
         from splinter import Browser
 
         with Browser('phantomjs') as browser:
