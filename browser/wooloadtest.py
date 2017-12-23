@@ -2,6 +2,7 @@ from locust import Locust, HttpLocust, TaskSet, task
 import string
 import random
 import time
+import json
 #from locust.web import app
 
 #from src import report
@@ -10,11 +11,11 @@ import time
 #app.add_url_rule('/htmlreport', 'htmlreport')
 
 class UserBehavior(TaskSet):
-#    def on_start(self):
+    def on_start(self):
         """ on_start is called when a Locust start before any task is scheduled """
-        #self.comment()
-        @task
-        def index(self):
+        self.comment()
+        @task(1)
+        def comment(self):
                 from splinter import Browser
 
                 with Browser('phantomjs') as browser:
@@ -41,7 +42,7 @@ class UserBehavior(TaskSet):
                     button.first.click()
 
 
-        #	    browser.quit()
+        	    browser.quit()
 class WebsiteUser(HttpLocust):
     host = "http://35.198.133.209/"
     weight = 1
