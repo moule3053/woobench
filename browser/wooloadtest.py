@@ -1,4 +1,4 @@
-from locust import HttpLocust, TaskSet, task
+from locust import Locust, HttpLocust, TaskSet, task
 import string
 import random
 import time
