@@ -13,7 +13,7 @@ import json
 class UserBehavior(TaskSet):
     def on_start(self):
         """ on_start is called when a Locust start before any task is scheduled """
-        #self.comment()
+        self.comment()
     @task(1)
     def comment(self):
         from splinter import Browser
