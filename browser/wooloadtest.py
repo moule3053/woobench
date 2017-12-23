@@ -17,9 +17,9 @@ class UserBehavior(TaskSet):
             foo = ['26','27','99','96','93','90','87','83','79','117','102','103','104','105','106','107','108','109','110','111','112','113','114','115','116']
             #foo = ['']
 	# Visit URL
-            url = WebsiteUser.host + "shop/?add-to-cart=" + random.choice(foo)
+            url = WebsiteUser.host + "/shop/?add-to-cart=" + random.choice(foo)
             browser.visit(url)
-            url = WebsiteUser.host + "checkout/"
+            url = WebsiteUser.host + "/checkout/"
             #print(url)
             browser.visit(url)
             browser.fill('billing_first_name', 'Vanessa')
