@@ -44,7 +44,7 @@ class UserBehavior(TaskSet):
 
 
         browser.quit()
-class WebsiteUser(HttpLocust):
+class WebsiteUser(Locust):
     host = "http://35.198.133.209/"
 #    weight = 1
     task_set = UserBehavior
