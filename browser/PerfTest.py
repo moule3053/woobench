@@ -3,12 +3,12 @@ import string
 import random
 import time
 import json
-#from locust.web import app
+from locust.web import app
 
-#from src import report
+from src import report
 
 # For reporting
-#app.add_url_rule('/htmlreport', 'htmlreport')
+app.add_url_rule('/htmlreport', 'htmlreport',report.download_report)
 
 class UserBehavior(TaskSet):
     def on_start(self):
