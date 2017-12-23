@@ -10,7 +10,7 @@ from locust.web import app
 app.add_url_rule('/htmlreport', 'htmlreport')
 
 class UserBehavior(TaskSet):
-    def on_start(self):
+#    def on_start(self):
         """ on_start is called when a Locust start before any task is scheduled """
         #self.comment()
 
@@ -42,7 +42,7 @@ class UserBehavior(TaskSet):
             button.first.click()
 
 
-	    browser.quit()
+#	    browser.quit()
 class WebsiteUser(HttpLocust):
     host = "http://35.198.133.209/"
     weight = 1
